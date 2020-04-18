@@ -24,11 +24,14 @@ def print():
   while not q.empty():
     content = q.get()  # Remove and return the first item from the queue (because I use the FIFO queue)
     lock.acquire() # Change the state to locked, a printing is starting
-    if(subprocess.check_output(['exe\paperang-test.exe', content])):
-      info = content
-      lock.release() # The printing is done, change the state to unlocked
-      app.logger.info("printed: "+ content + "\n")
-
+    try:
+      if(subprocess.check_output(['exe\paperang-test.exe', content])):
+        info = "已打印: "+ content
+        lock.release() # The printing is done, change the state to unlocked
+        app.logger.info("printed: "+ content + "\n")
+    except:
+      info = "Error: connect to printer failed"
+      app.logger.error(info)
   return render_template('hello.html', info = info)
 
 if __name__ == '__main__':
