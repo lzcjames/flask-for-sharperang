@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>今天是本寿星生日</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='hello.css') }}"/>
+   <body>
+      <form action="/print" method="POST">
+         <div class="container">
+            <div class="banner">
+               <div class="app-title">
+                  <h1>快给本寿星赐字吧</h1>
+               </div>
+               <div class="text-form">
+                  <div class="control-group">
+                     <textarea rows = "8" cols = "5" wrap="hard" name = "content" placeholder="在这里写点啥呗, please enter text here"></textarea>
+                  </div>
+                  <button type="submit" class="btn">OK</button>
+               </div>
+               {% if info %}
+               <p style="text-align: center"><strong>已打印: {{ info }} </strong></p>
+               {% endif %}
+            </div>     
+         </div>
+      </form>
+   </body>
+</html>
