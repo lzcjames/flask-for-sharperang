@@ -1,5 +1,5 @@
 # Flask-for-sharperang
-This is a developpment for web side for my fork of sharperang
+This is a developpment for web side for my fork of sharperang, for now it supports only paperang P2/P2s (喵喵机P2/P2s)
 
 # Environment
 - Windows10 x64
