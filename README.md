@@ -1,5 +1,7 @@
 # Flask-for-sharperang
-This is a developpment for web side for my fork of sharperang, for now it supports only paperang P2/P2s (喵喵机P2/P2s)
+This is a developpment for web side for my fork of sharperang, 
+
+now it supports only paperang P2/P2s (喵喵机P2/P2s)
 
 # Environment
 - Windows10 x64
@@ -28,6 +30,7 @@ pip install -r requirements.txt
 ```
 
 I use package `flask-ngrok` to make Flask app running on localhost over the public internet via [ngrok tool](https://ngrok.com/])
+> Before running Flask app, make sure that your paperang device is connected to Windows
 
 To launch app with ngrok, enter:
 
